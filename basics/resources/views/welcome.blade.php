@@ -16,6 +16,6 @@
   </head>
 
   <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#e1e1e1] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-    <livewire:counter />
+    <livewire:todos />
   </body>
 </html>
