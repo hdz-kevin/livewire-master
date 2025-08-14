@@ -31,7 +31,7 @@
 
   <ul>
     @foreach ($todos as $todo)
-    <li class="text-xl font-medium">- {{ $todo }}</li>
+      <li class="text-xl font-medium">- {{ $todo }}</li>
     @endforeach
   </ul>
 </div>
