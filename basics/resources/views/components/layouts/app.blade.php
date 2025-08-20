@@ -17,6 +17,7 @@
 			<nav class="bg-gray-800 text-white h-screen w-60 inline-block pl-4 pt-6">
 				<a @class(['block mb-3', 'font-bold' => request()->is('/')]) href="/">Todos</a>
 				<a @class(['block mb-3', 'font-bold' => request()->is('counter')]) href="/counter">Counter</a>
+				<a @class(['block mb-3', 'font-bold' => request()->is('posts')]) href="/posts">Posts</a>
 			</nav>
 
 			{{ $slot }}
