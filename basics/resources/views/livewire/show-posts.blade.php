@@ -7,14 +7,28 @@
       <tr>
         <th class="px-4 py-2">Title</th>
         <th class="px-4 py-2">Content</th>
+        <th></th>
       </tr>
     </thead>
     <tbody class="divide-y divide-gray-200">
       @foreach ($posts as $post)
-        {{-- Important: add wire:key to each individual item any time you are using a loop --}}
+        {{-- Important: add wire:key to each item inside the loop --}}
         <tr wire:key="{{ $post->id }}">
-          <td class="border border-gray-200 px-4 py-2">{{ $post->title }}</td>
-          <td class="border border-gray-200 px-4 py-2">{{ $post->content }}</td>
+          <td class="border border-gray-200 px-4 py-2">
+            {{ $post->title }}
+          </td>
+          <td class="border border-gray-200 px-4 py-4">
+            {{ str($post->content)->words(8) }}
+          </td>
+          <td>
+            <button
+              type="button"
+              wire:click="delete({{ $post->id }})"
+              wire:confirm="Are you sure you want to delete this post?"
+              class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+              Delete
+            </button>
+          </td>
         </tr>
       @endforeach
     </tbody>
