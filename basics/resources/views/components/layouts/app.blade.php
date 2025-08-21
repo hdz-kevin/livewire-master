@@ -18,9 +18,12 @@
 				<a @class(['block mb-3', 'font-bold' => request()->is('/')]) href="/">Todos</a>
 				<a @class(['block mb-3', 'font-bold' => request()->is('counter')]) href="/counter">Counter</a>
 				<a @class(['block mb-3', 'font-bold' => request()->is('posts')]) href="/posts">Posts</a>
+				<a @class(['block mb-3', 'font-bold' => request()->is('posts/create')]) href="/posts/create">Create Post</a>
 			</nav>
 
-			{{ $slot }}
+			<div class="p-10">
+				{{ $slot }}
+			</div>
 		</div>
 	</body>
 </html>
